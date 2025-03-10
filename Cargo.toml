@@ -1,0 +1,8 @@
+[package]
+name = "ns_keyed_archiver"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+plist = "1.7.0"
+nskeyedarchiver_converter = "0.1.2"
