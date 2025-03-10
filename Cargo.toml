@@ -6,7 +6,7 @@ authors = ["Jackson Coxson"]
 description = "A library to encode/decode NSKeyedArchive binary plists"
 repository = "https://github.com/jkcoxson/ns_keyed_archive"
 license = "MIT OR Apache-2.0"
-keywords = ["apple", "plist", "NSKeyedArchive", "parser", "decoder", "encoder"]
+keywords = ["apple", "plist", "NSKeyedArchive", "decoder", "encoder"]
 
 [dependencies]
 plist = "1.7.0"
