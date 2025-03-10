@@ -1,5 +1,5 @@
 [package]
-name = "ns_keyed_archiver"
+name = "ns-keyed-archive"
 version = "0.1.0"
 edition = "2024"
 authors = ["Jackson Coxson"]

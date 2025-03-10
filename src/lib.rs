@@ -3,6 +3,8 @@
 pub mod decode;
 pub mod encode;
 
+pub use nskeyedarchiver_converter::ConverterError;
+
 #[cfg(test)]
 mod tests {
     use super::*;
