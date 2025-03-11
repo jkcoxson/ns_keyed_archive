@@ -4,7 +4,7 @@ use nskeyedarchiver_converter::{Converter, ConverterError};
 use plist::Value;
 
 pub fn from_bytes(input: &[u8]) -> Result<Value, ConverterError> {
-    let mut decoder = Converter::from_bytes(input).unwrap();
+    let mut decoder = Converter::from_bytes(input)?;
     Ok(flatten_root(&decoder.decode()?))
 }
 
