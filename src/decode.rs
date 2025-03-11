@@ -19,7 +19,6 @@ pub fn from_file<P: AsRef<std::path::Path>>(path: P) -> Result<Value, ConverterE
 }
 
 pub fn flatten_root(input: &Value) -> Value {
-    println!("Flattening: {input:#?}");
     let mut result = plist::Dictionary::new();
 
     if let Value::Dictionary(root) = input {
