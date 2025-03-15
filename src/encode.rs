@@ -160,10 +160,7 @@ fn create_class_reference(
     let mut class_dict = Dictionary::new();
     class_dict.insert(
         "$classes".to_string(),
-        Value::Array(vec![
-            Value::String(class_name.to_string()),
-            Value::String("NSObject".to_string()),
-        ]),
+        Value::Array(vec![Value::String(class_name.to_string())]),
     );
     class_dict.insert(
         "$classname".to_string(),
