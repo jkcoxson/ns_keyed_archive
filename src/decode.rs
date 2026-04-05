@@ -89,14 +89,14 @@ fn decode_object(objects: &[Value], idx: usize) -> Result<Value, ConverterError>
                 .unwrap_or("");
 
             // NSString / NSMutableString
-            if (class_name.contains("NSString") || class_name.contains("NSMutableString"))
+            if class_name.contains("String")
                 && let Some(s) = d.get("NS.string").and_then(|v| v.as_string())
             {
                 return Ok(Value::String(s.to_string()));
             }
 
             // NSData / NSMutableData
-            if (class_name.contains("NSData") || class_name.contains("NSMutableData"))
+            if class_name.contains("Data")
                 && let Some(bytes) = d.get("NS.data").and_then(|v| v.as_data())
             {
                 return Ok(Value::Data(bytes.to_vec()));
