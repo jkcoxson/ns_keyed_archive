@@ -145,14 +145,12 @@ fn create_class_reference(
 ) -> Result<Uid, ConverterError> {
     // Check if we already have this class reference
     for (i, obj) in objects.iter().enumerate() {
-        if let Some(dict) = obj.as_dictionary() {
-            if let Some(classes) = dict.get("$classes").and_then(|c| c.as_array()) {
-                if let Some(name) = classes.first().and_then(|n| n.as_string()) {
-                    if name == class_name {
-                        return Ok(Uid::new(i as u64));
-                    }
-                }
-            }
+        if let Some(dict) = obj.as_dictionary()
+            && let Some(classes) = dict.get("$classes").and_then(|c| c.as_array())
+            && let Some(name) = classes.first().and_then(|n| n.as_string())
+            && name == class_name
+        {
+            return Ok(Uid::new(i as u64));
         }
     }
 
